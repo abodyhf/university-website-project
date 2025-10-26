@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Team Project</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      text-align: center;
-      margin-top: 100px;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 40px;
-    }
-    button {
-      background-color: #0078ff;
-      color: white;
-      border: none;
-      padding: 15px 40px;
-      margin: 15px;
-      border-radius: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background-color: #005fcc;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FoodFlow</title>
+
+  <!-- Font to match the look -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1>Our University Web Project Team</h1>
+  <!-- NAVBAR ONLY -->
+  <header class="ff-navbar" role="navigation" aria-label="Main">
+    <a class="ff-brand" href="index.html">
+      <img class="ff-logo" src="images/logo_foodflow.jpg" alt="FoodFlow logo">
+      <span class="ff-brand-text">FoodFlow</span>
+    </a>
 
-  <button onclick="window.location.href='danial.html'">Danial</button>
-  <button onclick="window.location.href='haress.html'">Haress</button>
-  <button onclick="window.location.href='mehmet.html'">Mehmet</button>
-  <button onclick="window.location.href='abdelsamad.html'">Abdelsamad</button>
-
+    <nav class="ff-links">
+      <a href="pages/home.html">Home</a>
+      <a href="pages/about.html">About Us</a>
+      <a href="pages/contact.html">Contact Us</a>
+    </nav>
+  </header>
 </body>
 </html>
