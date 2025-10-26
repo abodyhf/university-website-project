@@ -1,49 +1,154 @@
-/* --- base --- */
+/* ---------------- base ---------------- */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
   font-family: "Poppins", system-ui, -apple-system, Arial, sans-serif;
-  background: #fffef8; /* soft cream like the design */
+  background: #fffef8; /* soft cream */
   color: #111;
 }
 
-/* --- navbar --- */
+/* ---------------- navbar ---------------- */
 .ff-navbar {
   background: #fffef8;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 72px;          /* left/right spacing like the screenshot */
+  padding: 18px 72px;
 }
 
-/* left side: logo + text */
-.ff-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.ff-logo {
-  width: 36px;                 /* close to your screenshot */
-  height: 36px;
-  object-fit: contain;
-}
-.ff-brand-text {
-  font-weight: 700;            /* bold “FoodFlow” */
-  font-size: 22px;
-  color: #191919;
-}
+.ff-brand { display: flex; align-items: center; gap: 0; text-decoration: none; }
+.ff-logo  { height: 52px; width: auto; display: block; } /* bigger logo */
 
-/* right side: links */
-.ff-links {
-  display: flex;
-  gap: 48px;                   /* space between Home / About Us / Contact Us */
-}
+.ff-links { display: flex; gap: 48px; }
 .ff-links a {
   text-decoration: none;
   color: #191919;
-  font-size: 20px;             /* larger link text like your design */
+  font-size: 20px;
   font-weight: 500;
 }
-.ff-links a:hover { opacity: 0.8; }
+.ff-links a:hover { opacity: 0.85; }
+
+/* ---------------- hero layout ---------------- */
+.ff-hero {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 24px 72px 72px;
+  display: grid;
+  grid-template-columns: 1fr 460px; /* left wide, right card */
+  align-items: center;
+  gap: 56px;
+}
+
+/* left side */
+.ff-left h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 10px 0 28px;
+  color: #151515;
+}
+.ff-hero-img {
+  width: clamp(320px, 56vw, 560px);
+  height: auto;
+  display: block;
+}
+
+/* right side (login card) */
+.ff-card-wrap { position: relative; }
+.ff-card-wrap::before {
+  /* soft glow behind the card (like the screenshot) */
+  content: "";
+  position: absolute;
+  inset: -18px -22px -28px -22px;
+  border-radius: 28px;
+  background: rgba(245, 235, 205, 0.45); /* pale warm glow */
+  filter: blur(12px);
+  z-index: 0;
+}
+.ff-card {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px 34px;
+  box-shadow: 0 18px 46px rgba(0,0,0,0.08);
+}
+
+.ff-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.ff-sub {
+  margin: 0 0 18px;
+  color: #474747;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* form */
+.ff-form { display: grid; gap: 14px; }
+.ff-form input[type="email"],
+.ff-form input[type="password"] {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #e6e1d9;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  background: #fff;
+}
+.ff-form input:focus {
+  border-color: #d2c8b7;
+  box-shadow: 0 0 0 3px rgba(210, 200, 183, 0.25);
+}
+
+.ff-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  margin: 2px 0 4px;
+}
+
+/* button */
+.ff-btn {
+  margin-top: 6px;
+  width: 100%;
+  height: 54px;
+  border: 0;
+  border-radius: 999px;     /* pill */
+  background: #d68a33;      /* warm orange */
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 18px rgba(214, 138, 51, 0.25);
+}
+.ff-btn:hover { filter: brightness(0.98); }
+.ff-btn:active { transform: translateY(1px); }
+
+/* footer text in card */
+.ff-small {
+  text-align: center;
+  font-size: 14px;
+  color: #353535;
+  margin-top: 12px;
+}
+.ff-small a { color: #111; text-decoration: underline; }
+
+/* ---------------- responsive ---------------- */
+@media (max-width: 980px) {
+  .ff-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 18px 24px 48px;
+  }
+  .ff-left { text-align: center; }
+  .ff-hero-img { margin: 0 auto; }
+  .ff-navbar { padding: 14px 24px; }
+  .ff-links { gap: 22px; }
+}
 

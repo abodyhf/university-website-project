@@ -7,16 +7,15 @@
 
   <!-- Font to match the look -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- NAVBAR ONLY -->
+  <!-- NAVBAR (logo only on the left, links on the right) -->
   <header class="ff-navbar" role="navigation" aria-label="Main">
-    <a class="ff-brand" href="index.html">
+    <a class="ff-brand" href="index.html" aria-label="FoodFlow Home">
       <img class="ff-logo" src="images/logo_foodflow.jpg" alt="FoodFlow logo">
-      <span class="ff-brand-text">FoodFlow</span>
     </a>
 
     <nav class="ff-links">
@@ -25,5 +24,33 @@
       <a href="pages/contact.html">Contact Us</a>
     </nav>
   </header>
+
+  <!-- HERO: left image + heading, right login card -->
+  <main class="ff-hero">
+    <section class="ff-left">
+      <h1>FoodFlow – Your Culinary<br>Journey, Delivered</h1>
+      <img class="ff-hero-img" src="images/hero_truck.png" alt="Delivery truck illustration">
+    </section>
+
+    <aside class="ff-card-wrap">
+      <div class="ff-card">
+        <h2>Welcome Back!</h2>
+        <p class="ff-sub">Sign in to FoodFlow</p>
+
+        <form class="ff-form" action="#" method="post">
+          <input type="email" placeholder="Email" required aria-label="Email">
+          <input type="password" placeholder="Password" required aria-label="Password">
+
+          <label class="ff-remember">
+            <input type="checkbox"> <span>Remember me</span>
+          </label>
+
+          <button type="submit" class="ff-btn">Sign In</button>
+        </form>
+
+        <p class="ff-small">Don't have your account? <a href="#">Sign Up</a></p>
+      </div>
+    </aside>
+  </main>
 </body>
 </html>
