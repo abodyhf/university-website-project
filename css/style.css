@@ -17,7 +17,7 @@ body {
 }
 
 .ff-brand { display: flex; align-items: center; gap: 0; text-decoration: none; }
-.ff-logo  { height: 52px; width: auto; display: block; } /* bigger logo */
+.ff-logo  { height: 70px; width: auto; display: block; } /* bigger logo */
 
 .ff-links { display: flex; gap: 48px; }
 .ff-links a {
