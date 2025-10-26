@@ -1,1 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact page of abdelsamed</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 50px;">
+  <h1>Hello, this is the contact page of abdelsamed</h1>
+  <p>Welcome to my section of our university project website!</p>
+</body>
+</html>
+        
