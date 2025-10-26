@@ -1,1 +1,49 @@
+/* --- base --- */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: "Poppins", system-ui, -apple-system, Arial, sans-serif;
+  background: #fffef8; /* soft cream like the design */
+  color: #111;
+}
+
+/* --- navbar --- */
+.ff-navbar {
+  background: #fffef8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 72px;          /* left/right spacing like the screenshot */
+}
+
+/* left side: logo + text */
+.ff-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.ff-logo {
+  width: 36px;                 /* close to your screenshot */
+  height: 36px;
+  object-fit: contain;
+}
+.ff-brand-text {
+  font-weight: 700;            /* bold “FoodFlow” */
+  font-size: 22px;
+  color: #191919;
+}
+
+/* right side: links */
+.ff-links {
+  display: flex;
+  gap: 48px;                   /* space between Home / About Us / Contact Us */
+}
+.ff-links a {
+  text-decoration: none;
+  color: #191919;
+  font-size: 20px;             /* larger link text like your design */
+  font-weight: 500;
+}
+.ff-links a:hover { opacity: 0.8; }
 
