@@ -37,6 +37,9 @@ body {
   grid-template-columns: 1fr 460px; /* left wide, right card */
   align-items: center;
   gap: 56px;
+  top: -70px;
+  position: relative;
+
 }
 
 /* left side */
@@ -152,3 +155,54 @@ body {
   .ff-links { gap: 22px; }
 }
 
+
+/* ---------------- NAVBAR LINK EFFECTS ---------------- */
+
+/* Base link style (already there but smoother animation) */
+.ff-links a {
+  position: relative;
+  text-decoration: none;
+  color: #191919;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect — smooth underline slide-in */
+.ff-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d68a33;
+  transition: width 0.3s ease;
+}
+
+.ff-links a:hover::after {
+  width: 100%;
+}
+
+/* Hover glow + slight scale */
+.ff-links a:hover {
+  color: #d68a33;
+  transform: translateY(-2px);
+}
+
+/* Active link */
+.ff-links a.active {
+  color: #d68a33;
+  font-weight: 600;
+}
+
+.ff-links a.active::after {
+  width: 100%;
+}
+
+/* Click effect (press ripple) */
+.ff-links a:active {
+  transform: scale(0.96);
+  opacity: 0.8;
+}
