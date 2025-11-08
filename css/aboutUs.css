@@ -1,0 +1,139 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 2px solid #2e7d32;
+  color: #2e7d32;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 8%;
+  gap: 2.5rem;
+}
+
+.about-text {
+  flex: 1 1 450px;
+  max-width: 620px;
+}
+
+.about-text h1 {
+  font-size: 3rem;          /* Increased from 2.5rem */
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.about-text h2 {
+  color: #2e7d32;
+  font-size: 1.8rem;        /* Increased from 1.5rem */
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+}
+
+.about-text p {
+  font-size: 1.2rem;        /* Increased from 1.05rem */
+  margin-bottom: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Truck image styling */
+.about-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 90%;
+  max-width: 550px;
+  height: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+
+  .about-image img {
+    width: 80%;
+  }
+}
+
+/* Truck image styling */
+
+
+.about-image img {
+  width: 110%;              /* increased from 90% → makes it noticeably larger */
+  max-width: 680px;         /* bigger max size for larger screens */
+  height: auto;
+  background-color: #fffdf5;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* smooth visual effect */
+}
+
+.about-image img:hover {
+  transform: scale(1.03);   /* optional: subtle zoom on hover for a premium feel */
+}
