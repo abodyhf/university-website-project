@@ -206,3 +206,88 @@ body {
   transform: scale(0.96);
   opacity: 0.8;
 }
+
+
+/* ---------------- footer ---------------- */
+.ff-footer {
+  font-family: "Poppins", sans-serif;
+  padding: 48px 72px 24px;
+  margin-top: 48px;
+  border-top: 1px solid #e6e1d9; /* Uses border color from your forms */
+  background: #fffef8; /* Matches your body background */
+}
+
+.ff-footer-container {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Wider column for brand */
+  gap: 48px;
+}
+
+.ff-footer-brand .ff-brand {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.ff-logo-footer {
+  height: 50px; /* A bit smaller than the header logo */
+  width: auto;
+}
+
+
+
+
+
+
+.ff-footer-brand p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #474747; /* Uses subtitle color from your forms */
+  max-width: 300px;
+  margin: 0;
+}
+
+.ff-footer h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #151515;
+  margin: 0 0 16px;
+}
+
+.ff-links-footer {
+  display: grid;
+  gap: 12px;
+}
+
+.ff-footer-container {
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between; /* This pushes items to the ends */
+  align-items: flex-start; /* Aligns them to the top */
+  gap: 48px;
+}
+
+.ff-links-footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.ff-links-footer a:hover {
+  color: #d68a33; /* Your main brand orange */
+  text-decoration: underline;
+}
+
+.ff-footer-copyright {
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 1px solid #e6e1d9;
+  font-size: 14px;
+  color: #474747;
+}
+
